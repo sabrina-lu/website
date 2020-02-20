@@ -72,7 +72,7 @@ export class NarrationComponent implements OnInit {
   }
 
   public playAllEvil() {
-    this.closeEyesNarration.src="../../../assets/narrations/Evil4.mp3"
+    this.closeEyesNarration.src="../../../assets/narrati-inons/Evil4.mp3"
     this.closeEyesNarration.play()
     this.playCloseEyes()
   }
