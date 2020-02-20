@@ -1,0 +1,24 @@
+.header-container {
+    background-color: rgb(2, 8, 65);
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.header-tab {
+    padding: 1rem;
+    font-family: URW Chancery L, cursive;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.header-logo {
+    display: inline;
+    max-height: 2.5rem;
+}

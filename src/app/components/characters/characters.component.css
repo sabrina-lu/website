@@ -1,0 +1,27 @@
+.character-type {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+
+.character {
+    max-height: 15rem;
+    margin-right: 1.5rem;
+}
+
+.character-container {
+    padding-top: 0.3rem;
+    padding-left: 3rem;
+    padding-bottom: 3rem;
+    background-color: black;
+}
+
+.title {
+    font-family: URW Chancery L, cursive;
+    font-size: xx-large;
+    font-weight: 1000000px;
+    color: white;
+    padding-top: 0;
+
+}
