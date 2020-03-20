@@ -8,6 +8,7 @@ import { InstructionsComponent } from './components/instructions/instructions.co
 import { HomeComponent } from './components/home/home.component';
 import { NarrationComponent } from './components/narration/narration.component';
 import { CharactersComponent } from './components/characters/characters.component';
+import { GetCharactersService } from './services';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { CharactersComponent } from './components/characters/characters.componen
     AppRoutingModule,
     RouterModule
   ],
-  providers: [],
+  providers: [GetCharactersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -25,3 +25,12 @@
     padding-top: 0;
 
 }
+
+.description {
+    color: white;
+}
+
+.no-background {
+    background: none;
+    border: none;
+}

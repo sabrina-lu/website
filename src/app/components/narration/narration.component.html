@@ -15,6 +15,16 @@
         <div><input type="checkbox" [checked]="lancelot" (change)="lancelot=!lancelot"><label>Lancelot</label></div>
     </div>
 </div>
-<div>
-    <button [disabled]="" (click)="playNarration()">PLAY</button>
+<div class="narrationButtons">
+    <button [disabled]="isPlaying" (click)="findOrder()">PLAY</button>
+    <button (click)="stopNarration()">STOP and RESTART</button>
 </div>
+
+<h3 class="title">Special Characters</h3>
+<ng-container [ngTemplateOutlet]="characterSection" [ngTemplateOutletContext]="{characterSet: specialCharacters}"></ng-container>
+
+<ng-template #characterSection let-characterSet="characterSet">
+<ng-container *ngFor="let character of characterSet">
+    <div><input type="checkbox" [checked]="character[0]" (change)="character[0]=!character[0]"><label>{{ character[0] }}</label></div>
+</ng-container>
+</ng-template>
