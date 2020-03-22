@@ -1,21 +1,23 @@
-<div class="characters-container">
-    <div class="character-type">
-        <h3>Good Characters</h3>
-        <div><input type="checkbox" checked disabled><label>Merlin</label></div>
-        <div><input type="checkbox" [checked]="percival" (change)="percival=!percival"><label>Percival</label></div>
+<div class='page-container'>
+    <div class="characters-container">
+        <div class="character-type">
+            <h3>Good Characters</h3>
+            <div><input type="checkbox" checked disabled><label>Merlin</label></div>
+            <div><input type="checkbox" [checked]="percival" (change)="percival=!percival"><label>Percival</label></div>
+        </div>
+        <div class="character-type">
+            <h3>Bad Characters</h3>
+            <div><input type="checkbox" [checked]="mordred" (change)="mordred=!mordred"><label>Mordred</label></div>
+            <div><input type="checkbox" [checked]="percival" (change)="percival=!percival"><label>Morgana</label></div>
+            <div><input type="checkbox" [checked]="oberon" (change)="oberon=!oberon"><label>Oberon</label></div>
+        </div>
+        <div class="character-type">
+            <h3>Special Characters</h3>
+            <div><input type="checkbox" [checked]="lancelot" (change)="lancelot=!lancelot"><label>Lancelot</label></div>
+        </div>
     </div>
-    <div class="character-type">
-        <h3>Bad Characters</h3>
-        <div><input type="checkbox" [checked]="mordred" (change)="mordred=!mordred"><label>Mordred</label></div>
-        <div><input type="checkbox" [checked]="percival" (change)="percival=!percival"><label>Morgana</label></div>
-        <div><input type="checkbox" [checked]="oberon" (change)="oberon=!oberon"><label>Oberon</label></div>
+    <div class="narration-buttons">
+        <button [disabled]="isPlaying" (click)="playNarration()">PLAY</button>
+        <button (click)="stopNarration()">STOP and RESTART</button>
     </div>
-    <div class="character-type">
-        <h3>Special Characters</h3>
-        <div><input type="checkbox" [checked]="lancelot" (change)="lancelot=!lancelot"><label>Lancelot</label></div>
-    </div>
-</div>
-<div class="narrationButtons">
-    <button [disabled]="isPlaying" (click)="playNarration()">PLAY</button>
-    <button (click)="stopNarration()">STOP and RESTART</button>
 </div>

@@ -5,7 +5,7 @@ import { GetCharactersService } from 'src/app/services';
 @Component({
   selector: 'characters',
   templateUrl: './characters.component.html',
-  styleUrls: ['./characters.component.css']
+  styleUrls: ['./characters.component.css','../shared-styles.css']
 })
 export class CharactersComponent implements OnInit {
   public selectedCharacter: string
