@@ -61,7 +61,7 @@ export class NarrationComponent {
   }
 
   public playBeginning2() {
-    this.play(this.beginningNarration, "../../../assets/narrations/Beginning.mp3")
+    this.play(this.beginningNarration, source.beginning)
     
     if (this.mordred && this.oberon) {
       setTimeout(() => {
@@ -86,28 +86,28 @@ export class NarrationComponent {
   }
 
   public playMinions() {
-    this.play(this.minionsNarration, "../../../assets/narrations/Evil1.mp3") 
+    this.play(this.minionsNarration, source.minions) 
     setTimeout(() => { 
       this.playCloseEyes()
       }, 7000)
   }
 
   public playMordred() {
-    this.play(this.mordredNarration, "../../../assets/narrations/Evil2.mp3")
+    this.play(this.mordredNarration, source.mordred)
     setTimeout(() => { 
       this.playCloseEyes()
       }, 7000)
   }
 
   public playOberon() {
-    this.play(this.oberonNarration, "../../../assets/narrations/Evil3.mp3")
+    this.play(this.oberonNarration, source.oberon)
     setTimeout(() => { 
       this.playCloseEyes()
       }, 7000)
   }
 
   public playAllEvil() {
-    this.play(this.allEvilNarration, "../../../assets/narrations/Evil4.mp3")
+    this.play(this.allEvilNarration, source.allEvil)
     setTimeout(() => {
       this.playCloseEyes()
       },
@@ -115,35 +115,35 @@ export class NarrationComponent {
   }
 
   public playCloseEyes() {
-    this.play(this.closeEyesNarration, "../../../assets/narrations/CloseEyes.mp3")
+    this.play(this.closeEyesNarration, source.closeEyes)
     setTimeout(() => { 
       this.playMerlin()
       }, 3000)
   }
 
   public playMerlin() {
-    this.play(this.merlinNarration, "../../../assets/narrations/Merlin.mp3")
+    this.play(this.merlinNarration, source.merlin)
     setTimeout(() => {
       this.playThumbsDown()
       }, 9000)
   }
 
   public playThumbsDown() {
-    this.play(this.thumbsDownNarration, "../../../assets/narrations/ThumbsDown.mp3")
+    this.play(this.thumbsDownNarration, source.thumbsDown)
     setTimeout(() => { 
       this.percival? this.playPercival() : this.playEnding()
       }, 4000)
   }
 
   public playPercival() {
-    this.play(this.percivalNarration, "../../../assets/narrations/Percival.mp3")
+    this.play(this.percivalNarration, source.percival)
     setTimeout(() => {
       this.playThumbsDown2()
       }, 10000)
   }
 
   public playThumbsDown2() {
-    this.play(this.thumbsDownNarration, "../../../assets/narrations/ThumbsDown.mp3")
+    this.play(this.thumbsDownNarration, source.thumbsDown)
     setTimeout(() => { 
       this.playEnding()
       }, 3000)
@@ -151,7 +151,7 @@ export class NarrationComponent {
   }
   
   public playEnding() {
-    this.play(this.endingNarration, "../../../assets/narrations/End.mp3")
+    this.play(this.endingNarration, source.ending)
     setTimeout(() => {
       this.isPlaying = false
     }, 3500)
