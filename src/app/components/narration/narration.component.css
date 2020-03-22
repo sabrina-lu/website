@@ -11,13 +11,28 @@
 
 label{
     font-family: URW Chancery L, cursive;
-    font-size: medium;
+    font-size: large;
     color: white;
 }
 
 .narration-buttons {
     display: flex;
     justify-content: space-between;
-    padding-right: 3rem;
     margin-top: 30px;
 }
+
+button {
+    margin-right: 0.5rem;
+}
+
+@media only screen and (min-width: 900px) {
+    .characters-container {
+        justify-content: flex-start;
+    }
+    .character-type {
+        padding-right: 8rem;
+    }
+    .narration-buttons {
+        justify-content: flex-start;
+    }
+  }

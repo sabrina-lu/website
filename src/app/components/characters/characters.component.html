@@ -1,13 +1,13 @@
 <div class="page-container">
-    <div>
+    <div class="section">
         <h3 class="title">Good Characters</h3>
         <ng-container [ngTemplateOutlet]="characterSection" [ngTemplateOutletContext]="{characterSet: goodCharacters}"></ng-container>
     </div>
-    <div>
+    <div class="section">
         <h3 class="title">Evil Characters</h3>
         <ng-container [ngTemplateOutlet]="characterSection" [ngTemplateOutletContext]="{characterSet: badCharacters}"></ng-container>
     </div>
-    <div>
+    <div class="section">
         <h3 class="title">Special Characters</h3>
         <ng-container [ngTemplateOutlet]="characterSection" [ngTemplateOutletContext]="{characterSet: specialCharacters}"></ng-container>
 </div>

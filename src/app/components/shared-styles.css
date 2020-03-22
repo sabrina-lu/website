@@ -6,7 +6,7 @@
 h3 {
     font-family: URW Chancery L, cursive;
     font-weight: bolder;
-    font-size: x-large;
+    font-size: xx-large;
     margin: 0px;
     color: white;
 }
@@ -15,5 +15,9 @@ button {
     font-family: URW Chancery L, cursive;
     font-weight: bolder;
     font-size: large;
-    margin: 0px;
+    padding: 0.7rem;
+}
+
+.section {
+    margin-bottom: 3rem;
 }
