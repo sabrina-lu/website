@@ -4,7 +4,7 @@ import { source } from './source.enum'
 @Component({
   selector: 'narration',
   templateUrl: './narration.component.html',
-  styleUrls: ['./narration.component.css']
+  styleUrls: ['./narration.component.css', '../shared-styles.css']
 })
 export class NarrationComponent {
   public merlin: boolean
