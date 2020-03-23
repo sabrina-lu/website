@@ -1,5 +1,11 @@
 .header-container {
     background-color: rgb(2, 8, 65);
+    padding: 0.5rem 0rem;
+}
+
+.header-container2 {
+    background-color: rgb(77, 9, 3);
+    padding: 0.5rem 0rem;
 }
 
 .header {
