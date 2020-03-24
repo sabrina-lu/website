@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build-prod": "ng build --prod --base-href https://sabrina-lu.github.io/avalon/",
+    "build-prod": "ng build --prod --base-href https://sabrina-lu.github.io/website/",
     "ngh": "ngh -no-silent",
     "test": "ng test",
     "lint": "ng lint",
