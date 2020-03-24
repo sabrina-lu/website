@@ -10,7 +10,7 @@
 }
 
 label{
-    font-family: URW Chancery L, cursive;
+    font-family: Bookman, URW ;
     font-size: large;
     color: white;
 }
@@ -19,6 +19,14 @@ label{
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+}
+
+.title {
+    margin-bottom: 0.5rem;
+}
+
+.label {
+    margin-bottom: 0.2rem;
 }
 
 button {

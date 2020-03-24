@@ -1,20 +1,28 @@
 h3 {
-    font-family: URW Chancery L, cursive;
+    font-family: Bookman, URW ;
     font-weight: bolder;
     font-size: xx-large;
     margin: 0px;
     color: white;
 }
 
+h4 {
+    font-family: Bookman, URW ;
+    font-weight: bolder;
+    font-size: x-large;
+    margin: 0px;
+    color: white;
+}
+
 button {
-    font-family: URW Chancery L, cursive;
+    font-family: Bookman, URW ;
     font-weight: bolder;
     font-size: large;
     padding: 0.7rem;
 }
 
-pre {
-    font-family: URW Chancery L, cursive;
+p {
+    font-family: Bookman, URW ;
     color: white;
 }
 
