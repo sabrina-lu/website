@@ -1,19 +1,19 @@
 <div class='page-container'>
     <div class="characters-container">
         <div class="character-type">
-            <h3>Good Characters</h3>
-            <div><input type="checkbox" checked disabled><label>Merlin</label></div>
-            <div><input type="checkbox" [checked]="percival" (change)="percival=!percival"><label>Percival</label></div>
+            <h3 class="title">Good Characters</h3>
+            <div class="label"><input type="checkbox" checked disabled><label>Merlin</label></div>
+            <div class="label"><input type="checkbox" [checked]="percival" (change)="percival=!percival"><label>Percival</label></div>
         </div>
         <div class="character-type">
-            <h3>Bad Characters</h3>
-            <div><input type="checkbox" [checked]="mordred" (change)="mordred=!mordred"><label>Mordred</label></div>
-            <div><input type="checkbox" [checked]="percival" (change)="percival=!percival"><label>Morgana</label></div>
-            <div><input type="checkbox" [checked]="oberon" (change)="oberon=!oberon"><label>Oberon</label></div>
+            <h3 class="title">Bad Characters</h3>
+            <div class="label"><input type="checkbox" [checked]="mordred" (change)="mordred=!mordred"><label>Mordred</label></div>
+            <div class="label"><input type="checkbox" [checked]="percival" (change)="percival=!percival"><label>Morgana</label></div>
+            <div class="label"><input type="checkbox" [checked]="oberon" (change)="oberon=!oberon"><label>Oberon</label></div>
         </div>
         <div class="character-type">
-            <h3>Special Characters</h3>
-            <div><input type="checkbox" [checked]="lancelot" (change)="lancelot=!lancelot"><label>Lancelot</label></div>
+            <h3 class="title">Special Characters</h3>
+            <div class="label"><input type="checkbox" [checked]="lancelot" (change)="lancelot=!lancelot"><label>Lancelot</label></div>
         </div>
     </div>
     <div class="narration-buttons">
