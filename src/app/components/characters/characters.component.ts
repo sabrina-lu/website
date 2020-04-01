@@ -9,6 +9,7 @@ import { GetCharactersService } from 'src/app/services';
 })
 export class CharactersComponent implements OnInit {
   public selectedCharacter: string
+  public previousSelectedCharacter: string 
   public allCharacterDescriptions = new Map()
   public showDescription: boolean
   public goodCharacters = []
@@ -31,11 +32,22 @@ export class CharactersComponent implements OnInit {
   }
 
   public setCharacter(name: string) {
-    this.showDescription = !this.showDescription
     this.selectedCharacter = name
+    if (this.showDescription) {
+      if (this.previousSelectedCharacter !== this.selectedCharacter) {
+        this.showDescription = true
+      }
+      else {
+        this.showDescription = false
+      }
+    }
+    else {
+      this.showDescription = true
+    }
+    this.previousSelectedCharacter = name
   }
 
-  public getDescription(): string{
+  public getDescription(): string {
     return this.allCharacterDescriptions.get(this.selectedCharacter)
   }
 

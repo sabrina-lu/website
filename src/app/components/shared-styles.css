@@ -28,7 +28,9 @@ p {
 
 .page-container {
     padding: 3rem;
+    margin: 1rem;
     background-color: rgb(34, 34, 34);
+    border-radius: 3rem;
 }
 
 .section {
