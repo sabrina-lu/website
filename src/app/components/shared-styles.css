@@ -1,5 +1,5 @@
 h3 {
-    font-family: Bookman, URW ;
+    font-family: Optima;
     font-weight: bolder;
     font-size: xx-large;
     margin: 0px;
@@ -7,7 +7,7 @@ h3 {
 }
 
 h4 {
-    font-family: Bookman, URW ;
+    font-family: Optima;
     font-weight: bolder;
     font-size: x-large;
     margin: 0px;
@@ -15,14 +15,14 @@ h4 {
 }
 
 button {
-    font-family: Bookman, URW ;
+    font-family: Optima;
     font-weight: bolder;
     font-size: large;
     padding: 0.7rem;
 }
 
 p {
-    font-family: Bookman, URW ;
+    font-family: Optima;
     color: white;
 }
 
