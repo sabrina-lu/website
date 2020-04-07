@@ -9,7 +9,8 @@ a:hover {
 }
 
 body {
-    margin: 0px;
-    padding: 0px;
+    margin: 0rem;
+    padding: 0rem;
     background-color: black;
+    height: 100%;
 }

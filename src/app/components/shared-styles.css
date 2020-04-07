@@ -29,7 +29,7 @@ p {
 .page-container {
     padding: 3rem;
     margin: 1rem;
-    background-color: rgb(34, 34, 34);
+    background-color: rgba(34, 34, 34, 0.7);
     border-radius: 3rem;
 }
 
