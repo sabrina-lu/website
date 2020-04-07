@@ -15,16 +15,16 @@ export class NarrationComponent {
 
   public orderOfNarrations = []
 
-  public beginningNarration = new Audio()
-  public minionsNarration = new Audio()
-  public mordredNarration = new Audio()
-  public oberonNarration = new Audio() 
-  public allEvilNarration = new Audio()
-  public closeEyesNarration = new Audio()
-  public merlinNarration = new Audio()
-  public thumbsDownNarration = new Audio()
-  public percivalNarration = new Audio()
-  public endingNarration = new Audio()
+  public beginningNarration = document.createElement('audio')
+  public minionsNarration = document.createElement('audio')
+  public mordredNarration = document.createElement('audio')
+  public oberonNarration = document.createElement('audio')
+  public allEvilNarration = document.createElement('audio')
+  public closeEyesNarration = document.createElement('audio')
+  public merlinNarration = document.createElement('audio')
+  public thumbsDownNarration = document.createElement('audio')
+  public percivalNarration = document.createElement('audio')
+  public endingNarration = document.createElement('audio')
 
   public isPlaying: boolean
   
