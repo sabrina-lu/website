@@ -13,4 +13,5 @@ body {
     padding: 0rem;
     background-color: black;
     height: 100%;
+    overflow: hidden;
 }
