@@ -1,9 +1,9 @@
-.header-container {
+.header-container2 {
     background-color: rgb(2, 8, 65);
     padding: 0.5rem 0rem;
 }
 
-.header-container2 {
+.header-container {
     background-color: rgb(77, 9, 3);
     padding: 0.5rem 0rem;
 }
@@ -12,19 +12,22 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100%;
-    max-width: 1000px;
 }
 
 .header-tab {
-    padding: 1rem;
+    padding: 1rem 2rem; 
     font-family: Optima;
-    font-weight: bold;
+    font-weight: 500;
     font-size: x-large;
 }
 
 .header-logo {
     display: inline;
     max-height: 2.5rem;
+}
+
+a {
+    margin-left: 2.5rem;
 }

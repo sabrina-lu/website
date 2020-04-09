@@ -13,18 +13,9 @@ export class NarrationComponent {
   public oberon: boolean
   public lancelot: boolean
 
-  public orderOfNarrations = []
+  public index = 0
 
-  public beginningNarration = document.createElement('audio')
-  public minionsNarration = document.createElement('audio')
-  public mordredNarration = document.createElement('audio')
-  public oberonNarration = document.createElement('audio')
-  public allEvilNarration = document.createElement('audio')
-  public closeEyesNarration = document.createElement('audio')
-  public merlinNarration = document.createElement('audio')
-  public thumbsDownNarration = document.createElement('audio')
-  public percivalNarration = document.createElement('audio')
-  public endingNarration = document.createElement('audio')
+  public orderOfNarrations = []
 
   public isPlaying: boolean
   
@@ -37,142 +28,44 @@ export class NarrationComponent {
     window.location.reload()
   }
 
-  public playNarration() {
-    this.isPlaying = true
-    setTimeout(() => {
-     this.playBeginning2()
-    }, 1000)
-  }
-
-  public play(narration: any, src: string) {
-    narration.src=src
+  public play(src: string) {
+    var narration = document.createElement('audio')
+    narration.src = src
     narration.load()
     narration.play()
   }
 
-  public playNarration2(time: number = 3000) {
+  public playButtonClicked(time: number = 3000) {
     this.findOrder()
     this.isPlaying = true
-    let narration = new Audio()
-    for (let i = 0; i < this.orderOfNarrations.length; i++) {
-      this.play(narration, this.orderOfNarrations[i])
-      console.log(narration.duration)
-    }
+    this.playNarration(time)
   }
 
-  public playBeginning2() {
-    this.play(this.beginningNarration, source.beginning)
-    
-    if (this.mordred && this.oberon) {
-      setTimeout(() => {
-        this.playAllEvil()
-      }, 5000)
-    }
-    else if (this.oberon) {
-      setTimeout(() => {
-        this.playOberon()
-      }, 5000) 
-    }
-    else if (this.mordred) {
-      setTimeout(() => {
-        this.playMordred()
-      }, 5000)
-    }
-    else {
-      setTimeout(() => {
-        this.playMinions()
-      }, 5000)
-    }
-  }
-
-  public playMinions() {
-    this.play(this.minionsNarration, source.minions) 
-    setTimeout(() => { 
-      this.playCloseEyes()
-      }, 7000)
-  }
-
-  public playMordred() {
-    this.play(this.mordredNarration, source.mordred)
-    setTimeout(() => { 
-      this.playCloseEyes()
-      }, 7000)
-  }
-
-  public playOberon() {
-    this.play(this.oberonNarration, source.oberon)
-    setTimeout(() => { 
-      this.playCloseEyes()
-      }, 7000)
-  }
-
-  public playAllEvil() {
-    this.play(this.allEvilNarration, source.allEvil)
-    setTimeout(() => {
-      this.playCloseEyes()
-      },
-      9000)
-  }
-
-  public playCloseEyes() {
-    this.play(this.closeEyesNarration, source.closeEyes)
-    setTimeout(() => { 
-      this.playMerlin()
-      }, 3000)
-  }
-
-  public playMerlin() {
-    this.play(this.merlinNarration, source.merlin)
-    setTimeout(() => {
-      this.playThumbsDown()
-      }, 9000)
-  }
-
-  public playThumbsDown() {
-    this.play(this.thumbsDownNarration, source.thumbsDown)
-    setTimeout(() => { 
-      this.percival? this.playPercival() : this.playEnding()
-      }, 4000)
-  }
-
-  public playPercival() {
-    this.play(this.percivalNarration, source.percival)
-    setTimeout(() => {
-      this.playThumbsDown2()
-      }, 10000)
-  }
-
-  public playThumbsDown2() {
-    this.play(this.thumbsDownNarration, source.thumbsDown)
-    setTimeout(() => { 
-      this.playEnding()
-      }, 3000)
-
-  }
-  
-  public playEnding() {
-    this.play(this.endingNarration, source.ending)
-    setTimeout(() => {
-      this.isPlaying = false
-    }, 3500)
-  }
-
-  private sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+  public playNarration(time: number = 3000) {
+    let duration: number
+    let wait: number
+    this.index === 0 ? wait = 1000 : wait = time
+    this.index === 0 ? duration = 0 : duration = this.orderOfNarrations[this.index - 1][1]
+    setTimeout(() => {    
+      this.play(this.orderOfNarrations[this.index][0])
+      console.log(duration)
+      this.index++
+      if (this.index < this.orderOfNarrations.length) {
+        this.playNarration(time)
+      }
+    }, duration + wait)
   }
 
   private findOrder() {
-    this.orderOfNarrations.push(source.beginning) 
-    this.oberon&&this.mordred? this.orderOfNarrations.push(source.allEvil) :
-    this.oberon? this.orderOfNarrations.push(source.oberon) :
-    this.mordred? this.orderOfNarrations.push(source.mordred) : this.orderOfNarrations.push(source.minions)
-    this.orderOfNarrations.push(source.closeEyes) 
-    this.orderOfNarrations.push(source.merlin) 
-    this.orderOfNarrations.push(source.thumbsDown) 
-    this.percival? this.orderOfNarrations.push(source.percival,source.thumbsDown) : ""
-    this.orderOfNarrations.push(source.ending)
+    this.orderOfNarrations.push([source.beginning, 5000]) 
+    this.oberon&&this.mordred? this.orderOfNarrations.push([source.allEvil, 6000]) :
+    this.oberon? this.orderOfNarrations.push([source.oberon, 6000]) :
+    this.mordred? this.orderOfNarrations.push([source.mordred, 5000]) : this.orderOfNarrations.push([source.minions, 4000])
+    this.orderOfNarrations.push([source.closeEyes, 1000]) 
+    this.orderOfNarrations.push([source.merlin, 6000]) 
+    this.orderOfNarrations.push([source.thumbsDown, 3000]) 
+    this.percival? this.orderOfNarrations.push([source.percival, 8000],[source.thumbsDown, 3000]) : ""
+    this.orderOfNarrations.push([source.ending, 3000])
     console.log(this.orderOfNarrations)
   }
-     
-
 }
