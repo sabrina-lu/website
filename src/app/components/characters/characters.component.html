@@ -13,11 +13,11 @@
 </div>
 
 <ng-template #characterSection let-characterSet="characterSet">
-    <div class="characters-type">
+    <div class="character-type">
         <ng-container *ngFor="let character of characterSet">
             <button class="no-background" (click)="setCharacter(character[0])"><img class="character" [src]="character[1]"/>
-                <p class="description" *ngIf="isSelectedCharacter(character[0])">{{ getDescription() }}</p>
             </button>
+            <descriptions class="description" [character]="character[0]" *ngIf="isSelectedCharacter(character[0])"></descriptions>
         </ng-container>
     </div>
 </ng-template>

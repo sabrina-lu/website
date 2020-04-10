@@ -2,7 +2,7 @@ h3 {
     font-family: Optima;
     font-weight: bolder;
     font-size: xx-large;
-    margin: 0px;
+    margin: 0rem 0rem 0.5rem 0rem;
     color: white;
 }
 
@@ -27,6 +27,8 @@ button {
     font-weight: bolder;
     font-size: large;
     padding: 0.7rem;
+    border: none;
+    outline: none;
 }
 
 p, table {
@@ -47,10 +49,13 @@ p, table {
     background-color: rgba(34, 34, 34, 0.7);
     border-radius: 3rem;
     height: 70vh;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .section {
     margin-bottom: 3rem;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
