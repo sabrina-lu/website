@@ -1,4 +1,6 @@
 export { HomeComponent } from './home/home.component'
+export { HeaderComponent } from './header/header.component'
 export { InstructionsComponent } from './instructions/instructions.component'
 export { NarrationComponent } from './narration/narration.component'
 export { CharactersComponent } from './characters/characters.component'
+export { DescriptionsComponent } from './characters/descriptions/descriptions.component'

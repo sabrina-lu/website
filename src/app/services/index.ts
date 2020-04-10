@@ -1,1 +1,0 @@
-export { GetCharactersService } from './get-characters.service'

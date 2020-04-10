@@ -7,7 +7,7 @@
 
 .character {
     max-height: 15rem;
-    margin-right: 1.5rem;
+    margin-left: 1.5rem;
 }
 
 .title {
@@ -17,9 +17,12 @@
 
 .description {
     color: white;
+    text-align: left;
+    align-self: flex-start;
 }
 
 .no-background {
     background: none;
     border: none;
+    text-align: left;
 }
