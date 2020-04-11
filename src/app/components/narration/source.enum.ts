@@ -1,5 +1,6 @@
 export enum source {
     beginning = "../../../assets/narrations/Beginning.mp3",
+    lancelot = '../../../assets/narrations/Lancelot.mp3',
     minions = "../../../assets/narrations/Evil1.mp3",
     mordred = "../../../assets/narrations/Evil2.mp3",
     oberon = "../../../assets/narrations/Evil3.mp3",

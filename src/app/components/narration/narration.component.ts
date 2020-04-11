@@ -35,29 +35,28 @@ export class NarrationComponent {
     narration.play()
   }
 
-  public playButtonClicked(time: number = 3000) {
+  public playButtonClicked() {
     this.findOrder()
     this.isPlaying = true
-    this.playNarration(time)
+    this.playNarration()
   }
 
-  public playNarration(time: number = 3000) {
+  public playNarration(time: number = 2500) {
     let duration: number
     let wait: number
-    this.index === 0 ? wait = 1000 : wait = time
+    this.index === 0 ? wait = 0 : wait = time
     this.index === 0 ? duration = 0 : duration = this.orderOfNarrations[this.index - 1][1]
     setTimeout(() => {    
       this.play(this.orderOfNarrations[this.index][0])
       console.log(duration)
       this.index++
-      if (this.index < this.orderOfNarrations.length) {
-        this.playNarration(time)
-      }
+      this.index < this.orderOfNarrations.length ?  this.playNarration(time) : this.isPlaying = false
     }, duration + wait)
   }
 
   private findOrder() {
     this.orderOfNarrations.push([source.beginning, 5000]) 
+    this.lancelot ? this.orderOfNarrations.push([source.lancelot, 4000]) : ""
     this.oberon&&this.mordred? this.orderOfNarrations.push([source.allEvil, 6000]) :
     this.oberon? this.orderOfNarrations.push([source.oberon, 6000]) :
     this.mordred? this.orderOfNarrations.push([source.mordred, 5000]) : this.orderOfNarrations.push([source.minions, 4000])

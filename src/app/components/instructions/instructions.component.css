@@ -22,3 +22,12 @@ h5 {
 .photo {
     margin: 0rem 1.5rem 1.5rem 0rem;
 }
+
+.charts {
+    overflow-x: auto;
+}
+
+.info {
+    white-space: nowrap;
+    color: rgb(187, 187, 187);
+}
