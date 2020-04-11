@@ -1,7 +1,24 @@
 h6 { 
     font-family: Optima;
-    font-weight: 550;
-    font-size: medium;
-    margin: 1rem 0rem 0rem 0rem;
+    font-weight: 400;
+    font-size: x-large;
+    margin: 1rem 0rem;
     color: white;
 }
+
+.description-container {
+   max-width: 25rem;
+}
+
+.last {
+    margin: 0rem 0rem 0rem 0rem;
+}
+
+@media only screen and (max-width: 900px) {
+    .description-container {
+        text-align: center;
+     }
+     h6 {
+         margin: 0rem 0rem 1rem 0rem;
+     }
+  }

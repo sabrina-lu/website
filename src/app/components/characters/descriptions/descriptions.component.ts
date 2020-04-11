@@ -1,16 +1,17 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { info } from './info.enum';
 
 @Component({
   selector: 'descriptions',
   templateUrl: './descriptions.component.html',
   styleUrls: ['./descriptions.component.css', '../../shared-styles.css']
 })
+
 export class DescriptionsComponent implements OnInit {
   @Input() public character: string
   public name: string
   public ability: string
   public tip: string
-
   public allDescriptions = new Map()
 
   ngOnInit() {
@@ -18,16 +19,15 @@ export class DescriptionsComponent implements OnInit {
   }
   
   private setDescriptions() {
-    this.allDescriptions.set('merlin', ['Merlin', 'He knows all Evil but Mordred', 'Hard to play'])
-    this.allDescriptions.set('percival', ['Percival', 'Knows Merlin and Morgana', 'Hard to play'])
-    this.allDescriptions.set('minionG', ['Loyal Servant Of Arthur', 'Does not know anything', 'Hard to play'])
-    this.allDescriptions.set('mordred', ['Mordred', 'Unknown to Merlin', 'Hard to play'])
-    this.allDescriptions.set('morgana', ['Morgana', 'Appears as Merlin', 'Hard to play'])
-    this.allDescriptions.set('oberon', ['Oberon', 'Unknown to Evil', 'Hard to play'])
-    this.allDescriptions.set('assasin', ['Assasin', 'Gets final decision', 'Hard to play'])
-    this.allDescriptions.set('minionB', ['Minion Of Mordred', 'Knows other Evils', 'Hard to play'])
-    this.allDescriptions.set('lancelot', ['Lancelot', 'Can be good or bad', 'Hard to play'])
-    this.allDescriptions.set('lakeLady', ['Lady of The Lake', 'I keep forgetting what this character does', 'Hard to play'])
+    this.allDescriptions.set('merlin', [info.merlinName, info.merlinAbility, info.merlinTip])
+    this.allDescriptions.set('percival', [info.percivalName, info.percivalAbility, info.percivalTip])
+    this.allDescriptions.set('minionG', [info.GminName, info.GminAbility, info.GminTip])
+    this.allDescriptions.set('mordred', [info.mordredName, info.mordredAbility, info.mordredTip])
+    this.allDescriptions.set('morgana', [info.morganaName, info.morganaAbility, info.morganaTip])
+    this.allDescriptions.set('oberon', [info.oberonName, info.oberonAbility, info.oberonTip])
+    this.allDescriptions.set('assassin', [info.assassinName, info.assassinAbility, info.assassinTip])
+    this.allDescriptions.set('lancelot', [info.lancelotName, info.lancelotAbility, info.lancelotTip])
+    this.allDescriptions.set('lakeLady', [info.lakeLadyName, info.lakeLadyAbility, info.lakeLadyTip])
     this.getDescription()
   }
 
@@ -36,5 +36,4 @@ export class DescriptionsComponent implements OnInit {
     this.ability = this.allDescriptions.get(this.character)[1]
     this.tip = this.allDescriptions.get(this.character)[2]
   }
-
 }
