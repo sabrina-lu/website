@@ -1,3 +1,8 @@
+@keyframes slidein {
+    0%   {margin-left:0rem; opacity: 0;}
+    100% {margin-left:1rem; opacity: 1;}
+}
+
 h6 { 
     font-family: Optima;
     font-weight: 400;
@@ -9,6 +14,8 @@ h6 {
 .description-container {
    max-width: 25rem;
    margin-left: 1rem;
+   animation-name: slidein;
+   animation-duration: 1s;
 }
 
 .last {
@@ -22,4 +29,8 @@ h6 {
      h6 {
          margin: 0rem 0rem 1rem 0rem;
      }
+     @keyframes slidein {
+        0%   {opacity: 0;}
+        100% {opacity: 1;}
+    }
   }
