@@ -44,3 +44,17 @@ button {
         justify-content: flex-start;
     }
   }
+
+  @media only screen and (max-width: 650px) {
+    .characters-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .narration-buttons {
+        justify-content: flex-start;
+    }
+    .character-type {
+        margin-bottom: 2rem;
+    }
+  }
