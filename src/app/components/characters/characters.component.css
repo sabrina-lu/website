@@ -1,7 +1,7 @@
 .character-type {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
 }
 
@@ -16,13 +16,34 @@
 }
 
 .description {
-    color: white;
-    text-align: left;
-    align-self: flex-start;
+    align-self: center;
 }
 
 .no-background {
     background: none;
     border: none;
     text-align: left;
+    margin: 0;
+    padding: 0;
 }
+
+@media only screen and (max-width: 900px) {
+    .character-type {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .description {
+        align-self: center;
+        margin: 0.5rem 0rem 1rem 0rem;
+    }
+    .character {
+        max-height: 15rem;
+        margin: 1rem 0rem 0rem 0rem;
+    }
+    .title {
+        text-align: center;
+    }
+    
+  }

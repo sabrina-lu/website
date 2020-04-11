@@ -45,8 +45,7 @@ export class CharactersComponent implements OnInit {
     this.badCharacters.push(['mordred','../../../assets/images/Mordred.png'])
     this.badCharacters.push(['morgana','../../../assets/images/Morgana.png'])
     this.badCharacters.push(['oberon','../../../assets/images/Oberon.png'])
-    this.badCharacters.push(['assasin','../../../assets/images/Assasin.png'])
-    this.badCharacters.push(['minionB','../../../assets/images/MinionB.png'])   
+    this.badCharacters.push(['assassin','../../../assets/images/Assassin.png'])
     this.specialCharacters.push(['lancelot','../../../assets/images/Lancelot.png'])
     this.specialCharacters.push(['lakeLady','../../../assets/images/LakeLady.png'])     
   }

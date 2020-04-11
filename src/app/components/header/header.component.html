@@ -1,11 +1,22 @@
 <div class="header-container">
     <div class="header">
-        <div class="header-tab"><a href='avalon'><img class="header-logo" src="../../../assets/images/logo.png" /></a>
+        <div><a href='avalon'><img class="header-logo" src="../../../assets/images/logo.png" /></a>
         </div>
-        <div class="header-tab">
-            <a href='avalon/instructions'>Instructions</a>
-            <a href='avalon/characters'>Characters</a>
-            <a href='avalon/narration'>Narrations</a>
+        <div *ngIf="isCpuSize()" class="header-tab">
+            <ng-container [ngTemplateOutlet]="pages"></ng-container>
+        </div>
+        <div *ngIf="!isCpuSize()">
+            <button (click)="sideMenu = !sideMenu">&#9776;</button>
         </div>
     </div>
 </div>
+
+<div *ngIf="sideMenu">
+    <ng-container [ngTemplateOutlet]="pages"></ng-container>
+</div>
+
+<ng-template #pages>
+    <a href='avalon/instructions'>Instructions</a>
+    <a href='avalon/characters'>Characters</a>
+    <a href='avalon/narration'>Narrations</a>
+</ng-template>
