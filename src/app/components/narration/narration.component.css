@@ -43,9 +43,9 @@ button {
     .narration-buttons {
         justify-content: flex-start;
     }
-  }
+}
 
-  @media only screen and (max-width: 650px) {
+@media only screen and (max-width: 650px) {
     .characters-container {
         display: flex;
         flex-direction: column;
@@ -59,11 +59,11 @@ button {
     }
     .short-page-container {
         padding: 3rem;
-        margin: 1rem;
+        margin: 1rem 2rem;
         background-color: rgba(34, 34, 34, 0.7);
         border-radius: 3rem;
         height: 70vh;
         overflow-y: auto;
         overflow-x: hidden;
     }
-  }
+}

@@ -1,0 +1,39 @@
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.info {
+    margin: 1rem 0rem 0rem 0rem;
+    max-width: 33rem;
+}
+
+.image {
+    margin-right: 1rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+li, .intro {
+    font-family: Optima;
+    color: white;
+    font-size: large;
+}
+
+.title {
+    font-size: x-large;
+    font-weight: 500;
+    margin: 0rem 0rem 0.3rem 0rem;
+}
+
+ul {
+    margin: 0rem 0rem 1rem 0rem;
+}
+
+
+

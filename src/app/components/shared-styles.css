@@ -38,15 +38,15 @@ p, table {
 
 .short-page-container {
     padding: 3rem;
-    margin: 1rem;
+    margin: 1rem 2rem;
     background-color: rgba(34, 34, 34, 0.7);
     border-radius: 3rem;
 }
 
 .long-page-container {
     padding: 3rem;
-    margin: 1rem;
-    background-color: rgba(34, 34, 34, 0.7);
+    margin: 1rem 2rem;
+    background-color: rgba(34, 34, 34, 0.75);
     border-radius: 3rem;
     height: 70vh;
     overflow-y: auto;

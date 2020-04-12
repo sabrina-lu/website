@@ -15,12 +15,9 @@
 <ng-template #characterSection let-characterSet="characterSet">
     <div class="character-type">
         <ng-container *ngFor="let character of characterSet">
-            <div>
-                <button class="no-background" (click)="setCharacter(character[0])"><img class="character"
-                        [src]="character[1]" />
-                </button>
-               
-            </div>
+            <button class="no-background" (click)="setCharacter(character[0])"><img class="character"
+                    [src]="character[1]" />
+            </button>
             <descriptions class="description" [character]="character[0]" *ngIf="isSelectedCharacter(character[0])">
             </descriptions>
         </ng-container>
