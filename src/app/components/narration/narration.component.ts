@@ -30,8 +30,8 @@ export class NarrationComponent {
 
   public play(src: string) {
     var narration = document.createElement('audio')
-    narration.pause()
-    narration.src = ''
+    // narration.pause()
+    // narration.src = ''
     narration.src = src
     narration.load()
     narration.play()
