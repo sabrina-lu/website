@@ -2,7 +2,8 @@ export enum info {
 
     merlinName = 'Merlin',
     merlinAbility = 'Knows all Evil but Mordred',
-    merlinTip = 'You must guide the loyal servants in the right direction. '+
+    merlinTip = 'You must guide the loyal servants in the right direction while staying hidden. '+
+                'If the Evil players figure out that you are Merlin then they can easily win. '+
                 'Do not call out a player for being Evil without any logical reasoning to back it up. '+
                 'Try to make deductions based on actions taken by players in the game. '+
                 'To figure out who Mordred is, pay attention who the minions side with.',
