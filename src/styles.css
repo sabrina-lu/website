@@ -16,13 +16,12 @@ body {
     overflow: hidden;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
-
 @media only screen and (max-width: 500px) {
     body {
         overflow: scroll; 
+    }
+    ::-webkit-scrollbar {
+        display: none;
     }
 }
 
