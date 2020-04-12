@@ -24,10 +24,28 @@ h5 {
 }
 
 .charts {
+    overflow-y: hidden;
     overflow-x: auto;
 }
 
-.info {
-    white-space: nowrap;
-    color: rgb(187, 187, 187);
-}
+.tooltip {
+    position: relative;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 8rem;
+    background-color: rgb(24, 24, 24);
+    color: #fff;
+    font-size: small;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+  
+    position: absolute;
+    z-index: 1;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }

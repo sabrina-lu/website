@@ -1,7 +1,7 @@
 export enum info {
 
     merlinName = 'Merlin',
-    merlinAbility = 'Knows all evil but Mordred',
+    merlinAbility = 'Knows all Evil but Mordred',
     merlinTip = 'You must guide the loyal servants in the right direction. '+
                 'Do not call out a player for being Evil without any logical reasoning to back it up. '+
                 'Try to make deductions based on actions taken by players in the game. '+
@@ -37,8 +37,8 @@ export enum info {
                 'Try to fail missions to help your teammates identify who you are, but this might cause two failures. ',
 
     assassinName = 'Assassin',
-    assassinAbility = 'If Evil players can not come to agreement who Merlin is, Assassin gets final pick',
-    assassinTip = 'Try to fail quests with more people and use logic to blame someone else. '+
+    assassinAbility = 'If Evil players can not come to an agreement who Merlin is, Assassin gets final pick',
+    assassinTip = 'When you fail a quest try to use logic to blame someone else. '+
                   'You can try to figure out who Merlin is because only he knows you are Evil. '+
                   'Keep track of who does not want you on the quest.',
 
@@ -55,5 +55,5 @@ export enum info {
                   'At the end of each round, the card moves along the table in a counter clockwise direction. '+
                   'After the second, third and fourth quest the player with this card can choose someone to look at their loyalty. '+
                   'Basically, the chosen player gets handed two cards: one blue(Good) and one red(Evil). '+
-                  'They must give the Lady of the Lake their correct loyalty and it is up to the Lady of the Lake to lie about that players loyalty.'
+                  'They must give the Lady of the Lake their correct loyalty and it is up to the Lady of the Lake what they want to do with this information (lie or not).'
 }

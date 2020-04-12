@@ -25,12 +25,12 @@ h6 {
 @media only screen and (max-width: 900px) {
     .description-container {
         text-align: center;
-     }
-     h6 {
+    }
+    h6 {
          margin: 0rem 0rem 1rem 0rem;
-     }
-     @keyframes slidein {
+    }
+    @keyframes slidein {
         0%   {opacity: 0;}
         100% {opacity: 1;}
     }
-  }
+}
