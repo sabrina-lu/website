@@ -13,8 +13,8 @@ export class NarrationComponent {
   public oberon: boolean
   public lancelot: boolean
 
+  public narration
   public index = 0
-
   public orderOfNarrations = []
 
   public isPlaying: boolean
@@ -29,18 +29,16 @@ export class NarrationComponent {
   }
 
   public play(src: string) {
-    var narration = document.createElement('audio')
-    // narration.pause()
-    // narration.src = ''
-    narration.src = src
-    narration.load()
-    narration.play()
+    this.narration.src = src
+    this.narration.load()
+    this.narration.play()
   }
 
   public playButtonClicked() {
     this.findOrder()
     this.isPlaying = true
     this.playNarration()
+    this.narration = document.createElement('audio')
   }
 
   public playNarration(time: number = 2500) {
@@ -67,6 +65,5 @@ export class NarrationComponent {
     this.orderOfNarrations.push([source.thumbsDown, 3000]) 
     this.percival? this.orderOfNarrations.push([source.percival, 8000],[source.thumbsDown, 3000]) : ""
     this.orderOfNarrations.push([source.ending, 3000])
-    console.log(this.orderOfNarrations)
   }
 }
