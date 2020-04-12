@@ -39,14 +39,14 @@ export class CharactersComponent implements OnInit {
   }
 
   private addCharacterImages () {
-    this.goodCharacters.push(['merlin','../../website/assets/images/Merlin.png'])
-    this.goodCharacters.push(['percival','../../website/assets/images/Percival.png'])
-    this.goodCharacters.push(['minionG','../../website/assets/images/MinionG.png'])
-    this.badCharacters.push(['mordred','../../website/assets/images/Mordred.png'])
-    this.badCharacters.push(['morgana','../../website/assets/images/Morgana.png'])
-    this.badCharacters.push(['oberon','../../website/assets/images/Oberon.png'])
-    this.badCharacters.push(['assassin','../../website/assets/images/Assassin.png'])
-    this.specialCharacters.push(['lancelot','../../website/assets/images/Lancelot.png'])
-    this.specialCharacters.push(['lakeLady','../../website/assets/images/LakeLady.png'])     
+    this.goodCharacters.push(['merlin','../../../assets/images/Merlin.png'])
+    this.goodCharacters.push(['percival','../../../assets/images/Percival.png'])
+    this.goodCharacters.push(['minionG','../../../assets/images/MinionG.png'])
+    this.badCharacters.push(['mordred','../../../assets/images/Mordred.png'])
+    this.badCharacters.push(['morgana','../../../assets/images/Morgana.png'])
+    this.badCharacters.push(['oberon','../../../assets/images/Oberon.png'])
+    this.badCharacters.push(['assassin','../../../assets/images/Assassin.png'])
+    this.specialCharacters.push(['lancelot','../../../assets/images/Lancelot.png'])
+    this.specialCharacters.push(['lakeLady','../../../assets/images/LakeLady.png'])     
   }
 }
