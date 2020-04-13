@@ -37,7 +37,7 @@ p, table {
 }
 
 .page-container {
-    padding: 3rem 5rem;
+    padding: 3rem 5rem 10rem 5rem;
     height: 70vh ;
     overflow-y: auto;
     overflow-x: hidden;
